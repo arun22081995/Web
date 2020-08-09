@@ -1,0 +1,71 @@
+.container{
+    margin-left: 2%;
+}
+.container h6{
+  
+    margin-left:  12%;
+    color: #d4d4d4;
+    
+}
+.container h3{
+    margin-left:  12%;
+    color: #d4d4d4;
+}
+.navbar{
+    background-color: grey !important;
+}
+#Manual{
+    color : white;
+}
+#Bulk{
+    color : white;
+}
+.header{
+    margin-top: 4%;
+    margin-left: 43%;
+}
+.header1{
+    margin-top: 1%;
+    margin-left: 36%;   
+    color:red;
+}
+.header2{
+    margin-top: 1%;
+    margin-left: 36%;   
+    color: red;   
+}
+.row
+{
+margin-top: 3%;    
+margin-left: 12%;
+
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  #inputState{
+    width: 100%;
+    padding: 6px;
+    border: 2px solid #ccc;        
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+.test{
+    margin-top: 1%;
+    margin-left: 21%;
+}
+.btn1{
+    margin-top: 1%;    
+    margin-left: 21%;
+
+}
+.btn2{
+    margin-top: 1%;    
+    margin-left: 1%;
+
+}

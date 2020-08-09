@@ -1,0 +1,111 @@
+<div class="container">
+    <img src="https://secure.zurichna.com/zna/app/images/zurichlogo.gif" alt="">
+  <h6 class="mr-auto">Zurich North America</h6>
+  <h3 class="mr-auto">Sanctions Manual Screener</h3>
+  </div>
+  <nav class="navbar navbar-light py-0 bg-light navbar-expand-sm py-md-0">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link" id="Manual">New Manual Screening</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/samples" class="nav-link" id="Bulk">New Bulk Screening</a>
+          </li>  
+      </ul>
+    </div>
+      </nav>
+      <div class="header">
+        <h6>Manual Screening</h6>
+      </div>
+      <div class="header1">
+          <small>Required fields for search are Name,Trade Name or Country</small>
+       </div>
+      <small class="header2">Availability: 02:30hrs - 20:00hrs(CST)</small>
+      <div class="c1">
+      <form [formGroup]="RegForm">
+          <div class="form-group row">
+            <label for="Name" class="col-sm-1 col-form-label">Name:</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="Name" placeholder="Name" formControlName="Name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="TradeName" class="col-sm-1 col-form-label">TradeName:</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="TradeName" placeholder="TradeName" formControlName="TradeName">
+            </div>
+          </div>
+          <div class="form-group row">
+              <label for="Address1" class="col-sm-1 col-form-label">Address1:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="Address1" placeholder="Address1" formControlName="Address1">
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="Address2" class="col-sm-1 col-form-label">Address2:</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="Address2" placeholder="Address2" formControlName="Address2">
+                </div>
+            </div>
+              <div class="form-group row">
+                  <label for="Country" class="col-sm-1 col-form-label">Country:</label>
+                  <div class="col-sm-3">
+                      <select id="inputState" class="form-control">
+                          <option selected>- Select a Country -</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="form-group row">
+                  <label for="City" class="col-sm-1 col-form-label">City:</label>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="City" placeholder="City">
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label for="State" class="col-sm-1 col-form-label">State:</label>
+                  <div class="col-sm-3">
+                      <select id="inputState" class="form-control">
+                          <option selected></option>
+                        </select>
+                    </div>
+              </div>
+              <div class="test">
+              <small>Testing threshold: 94%</small>
+              </div>
+              <button type="submit" (click)="onSubmit()" class="btn1 btn-primary">Screen</button>
+              <button type="reset" class="btn2 btn-primary">Clear Screen</button>
+              </form>
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name </th>
+                      <th scope="col">Trade Name</th>
+                      <th scope="col">Address1</th>
+                      <th scope="col">Address2</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let Regdata of Regdatas">
+                      <td>{{Regdata.Name}}</td>
+                      <td>{{Regdata.TradeName}}</td>
+                      <td>{{Regdata.Address1}}</td>
+                      <td>{{Regdata.Address2}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+               <div>
+                <div class="footer">
+                 <small>Copyright 2002-2004 Zurich American Insurance Company. All rights reserved.
+                  </small>
+               </div>                
+              <small>Access to this web site is governed by the <a href="Terms of Use">Terms of Use</a>. |<a href="Privacy Notice"></a>.</small>
+              <div class="footer1">
+              <small>Policies are underwritten by the member companies of Zurich North America, including Zurich American Insurance Company. </small>
+              </div>
+              <router-outlet></router-outlet>
+
+              <h3>Basic Buttons</h3>
